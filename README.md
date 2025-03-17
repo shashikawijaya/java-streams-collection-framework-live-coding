@@ -93,7 +93,7 @@ cd java-streams-top-earners
 
 ### **2. Run Tests**
 ```sh
-mvn test  # If using Maven
+mvn test  
 ```
 
 ---
