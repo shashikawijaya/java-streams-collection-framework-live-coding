@@ -71,13 +71,16 @@ Your solution will be evaluated based on the following criteria:
 
 ---
 
-## **JUnit Test Cases**
-To verify your implementation, run the provided **JUnit tests** in `EmployeeProcessorTest.java`. These tests check:
+## **Test Cases and Scenarios**
 
-✅ Employees in a department with **same or different salaries**  
-✅ **Single** employee in a department  
-✅ **Empty list** case  
-✅ Employees across **multiple departments**  
+| **Test Case** | **Description** |
+|--------------|----------------|
+| **testSingleEmployeeInDepartment** | Ensures that a single employee in a department is correctly returned as the highest earner. |
+| **testAllEmployeesWithSameSalary** | Ensures that if all employees in a department have the same salary, all are returned (sorted lexicographically). |
+| **testDifferentMaxSalariesInDepartment** | Ensures that the single highest-earning employee in a department is selected correctly. |
+| **testSameMaxSalariesAcrossDepartments** | Ensures correct grouping when multiple departments have employees with the same maximum salary. |
+| **testEmptyList** | Ensures that an empty list returns an empty map without errors. |
+| **testDepartmentWithDifferentSalaries** | Ensures that only the highest-paid employees per department are returned. |
 
 ---
 
@@ -91,8 +94,6 @@ cd java-streams-top-earners
 ### **2. Run Tests**
 ```sh
 mvn test  # If using Maven
-or
-gradle test  # If using Gradle
 ```
 
 ---
