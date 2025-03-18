@@ -1,4 +1,4 @@
-# Java Streams & Collection Framework - High Difficulty Coding Challenge
+# Java Streams & Collection Framework - Coding Challenge
 
 ## **Question: Get Top Earners by Department**
 **Difficulty:** Hard  
