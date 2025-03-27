@@ -95,4 +95,22 @@ class EmployeeProcessorTest {
 
         assertEquals(expected, EmployeeProcessor.getTopEarnersByDepartment(employees));
     }
+
+    // Case 7: Top Earners Are Added in Reverse Lexicographical Order
+    // Ensures that the list of top earners is explicitly sorted alphabetically, 
+    // even when input order is reversed.
+    @Test
+    public void testUnsortedTopEarnersListShouldBeSorted() {
+        List<Employee> employees = Arrays.asList(
+            new Employee(1, "Zara", 80000, "Sales"),
+            new Employee(2, "Nina", 80000, "Sales"),
+            new Employee(3, "Anna", 80000, "Sales"),
+            new Employee(4, "Mike", 70000, "Sales")
+        );
+
+        Map<String, List<String>> expected = new HashMap<>();
+        expected.put("Sales", Arrays.asList("Anna", "Nina", "Zara")); // Sorted order
+
+        assertEquals(expected, EmployeeProcessor.getTopEarnersByDepartment(employees));
+    }
 }
